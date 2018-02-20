@@ -9,6 +9,7 @@ namespace BeachTwo
 
             //instantiate travelLoc
             TravelLocTwo loc1 = new TravelLocTwo();
+            Hotel loc2 = new Hotel();
 
             //loc1.GetBeachLoc(loc1.SetEyeValue(color));
             //get user input
@@ -18,10 +19,12 @@ namespace BeachTwo
             string color = Console.ReadLine().ToLower();            
             int location = loc1.SetEyeValue(color);
             string vacSpot = loc1.GetBeachLoc(location);           
-            Console.WriteLine("You'll be vacationing at " + vacSpot);
+            
             Console.WriteLine("What is your shoe size?");
             double size = Convert.ToDouble(Console.ReadLine());
-            loc1.GetHotel(size, location);
+            
+            string hotel =   loc2.GetHotel(size, location);
+            Console.WriteLine("You'll be vacationing at " + vacSpot + " " + hotel);
 
         }
 
